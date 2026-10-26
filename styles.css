@@ -641,7 +641,184 @@ body {
 .add-button:hover {
   background-color: #223929;
 }
+/* Promotion section */
+.promo-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 24px 6%;
+  background: #faf8ef;
+  box-sizing: border-box;
+}
 
+/* Both banners */
+.promo-banner {
+  min-width: 0;
+  min-height: 165px;
+  padding: 20px;
+  border-radius: 14px;
+  box-sizing: border-box;
+}
+
+/* Salad banner */
+.promo-salad {
+  background: #203d2b;
+  color: #fffaf0;
+}
+
+/* Delivery banner */
+.promo-delivery {
+  background: #f5e5d2;
+  color: #263d2c;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.delivery-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.qr-card {
+  flex-shrink: 0;
+  width: 65px;
+  padding: 8px;
+  background: white;
+  color: #263d2c;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Text */
+.promo-banner h2 {
+  font-size: 20px;
+  line-height: 1.25;
+  margin: 10px 0;
+}
+
+.promo-banner p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 8px 0;
+}
+
+.promo-tag {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* Buttons */
+.promo-action,
+.app-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.promo-button {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.light-button {
+  background: #fffaf0;
+  color: #203d2b;
+}
+
+.dark-button {
+  background: #203d2b;
+  color: white;
+}
+
+/* QR decoration */
+.qr-card {
+  flex-shrink: 0;
+  width: 75px;
+  padding: 8px;
+  background: white;
+  color: #203d2b;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.qr-design {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  aspect-ratio: 1;
+}
+
+.qr-design span {
+  background: #203d2b;
+  border-radius: 2px;
+}
+
+.qr-design span:nth-child(2),
+.qr-design span:nth-child(4),
+.qr-design span:nth-child(8) {
+  background: white;
+  border: 2px solid #203d2b;
+}
+
+.qr-card p {
+  font-size: 9px;
+  margin-bottom: 0;
+}
+
+/* Phone layout: still side by side */
+@media (max-width: 700px) {
+  .promo-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding: 18px 3%;
+  }
+
+  .promo-banner {
+    min-height: 165px;
+    padding: 10px;
+  }
+
+  .promo-banner h2 {
+    font-size: 14px;
+  }
+
+  .promo-banner p {
+    font-size: 10px;
+  }
+
+  .promo-action,
+  .app-buttons {
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .promo-button {
+    padding: 7px 8px;
+    font-size: 9px;
+  }
+
+  .promo-delivery {
+    gap: 5px;
+  }
+
+  .qr-card {
+    width: 48px;
+    padding: 5px;
+  }
+
+  .qr-card p {
+    font-size: 7px;
+  }
+}
 /* VERDANT FOOTER */
 
 .site-footer {
